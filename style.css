@@ -1,0 +1,53 @@
+:root {
+  --red-main: #c62828;
+  --red-light: #fdecea;
+  --red-hover: #b71c1c;
+  --white: #ffffff;
+  --gray-bg: #f6f6f6;
+  --gray-border: #dddddd;
+  --text-dark: #333333;
+}
+
+.purpose-subject { display:flex; gap:10px; }
+.purpose-subject > div { flex:1; }
+.lab-room { margin-top:10px; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--gray-bg);
+  padding: 20px;
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+h2 { text-align: center; color: var(--red-main); margin-bottom: 20px; }
+h3 { text-align: center; margin-top: 30px; color: #444; }
+
+label { font-weight: bold; margin-top: 10px; display:block; }
+input, select, button { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid var(--gray-border); }
+
+input:focus, select:focus { outline:none; border-color: var(--red-main); box-shadow: 0 0 0 2px rgba(198,40,40,0.15); }
+
+button { background: var(--red-main); color: white; border: none; font-weight: bold; cursor: pointer; transition:0.2s; margin-top:10px; }
+button:hover:not(:disabled) { background: var(--red-hover); }
+button:disabled { background: #ccc; cursor: not-allowed; }
+
+.borrow-section { margin-bottom:30px; }
+
+.student-info { background:#fdecea; padding:10px; margin-top:10px; border-radius:6px; }
+.student-info p { margin: 4px 0; }
+
+table { width:100%; border-collapse: collapse; margin-top:15px; }
+th, td { border:1px solid var(--gray-border); padding:8px; text-align:center; font-size:13px; }
+th { background: var(--red-light); color: var(--red-main); font-weight:bold; }
+.available { color:#2e7d32; font-weight:bold; }
+.borrowed { color: var(--red-main); font-weight:bold; }
+.damaged { color:#8d4b00; font-weight:bold; }

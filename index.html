@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Equipment Borrowing System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h2>Equipment Borrowing & Returning System</h2>
+
+  <!-- BORROW SECTION -->
+  <h3>Borrow Equipment</h3>
+  <div class="borrow-section">
+    <label>Student ID:</label>
+    <input id="studentId" placeholder="YYYY-MM-XXXXX">
+
+    <div id="studentInfo" class="student-info">
+      <p><strong>Name:</strong> <span id="sName">-</span></p>
+      <p><strong>Course:</strong> <span id="sCourse">-</span></p>
+      <p><strong>Year:</strong> <span id="sYear">-</span></p>
+      <p><strong>Borrow Time:</strong> <span id="borrowTime">-</span></p>
+    </div>
+
+    <label>Equipment:</label>
+    <select id="equipSelect"></select>
+
+    <label>Duration:</label>
+    <select id="duration">
+      <option value="30">30 minutes</option>
+      <option value="60">1 hour</option>
+      <option value="120">2 hours</option>
+      <option value="180">3 hours</option>
+      <option value="240">4 hours</option>
+      <option value="480">8 hours</option>
+      <option value="720">12 hours</option>
+      <option value="1440">24 hours</option>
+    </select>
+
+    <div class="purpose-subject">
+      <div>
+        <label>Purpose:</label>
+        <select id="purpose">
+          <option value="">--Select Purpose--</option>
+          <option value="Defense">Defense</option>
+          <option value="Presentation">Presentation</option>
+          <option value="Research">Research</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <div>
+        <label>Subject:</label>
+        <input id="subject" placeholder="Enter Subject">
+      </div>
+    </div>
+
+    <div class="lab-room">
+      <div style="margin-bottom:10px;">
+        <label>Main Area:</label>
+        <select id="mainArea">
+          <option value="">--Select Area--</option>
+          <option value="Lab 1">Lab 1</option>
+          <option value="Lab 2">Lab 2</option>
+          <option value="Lab 3">Lab 3</option>
+          <option value="EdTech/Lab4">EdTech/Lab4</option>
+          <option value="Studyhall">Studyhall</option>
+          <option value="Library">Library</option>
+          <option value="TESDA Hall">TESDA Hall</option>
+        </select>
+      </div>
+      <div>
+        <label>Specific Room:</label>
+        <select id="specificRoom">
+          <option value="">--Select Room--</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="borrowBtn" disabled>Borrow Equipment</button>
+  </div>
+
+  <!-- RETURN SECTION -->
+  <h3>Return Equipment</h3>
+  <div class="borrow-section">
+    <label>Student ID:</label>
+    <input id="returnStudentId" placeholder="YYYY-MM-XXXXX">
+
+    <label>Equipment to Return:</label>
+    <select id="returnSelect"></select>
+
+    <label>Condition:</label>
+    <select id="condition">
+      <option value="OK">OK</option>
+      <option value="Damaged">Damaged</option>
+      <option value="Missing Parts">Missing Parts</option>
+    </select>
+
+    <button id="returnBtn">Confirm Return</button>
+  </div>
+
+  <!-- TRANSACTION HISTORY -->
+  <h3>Transaction History</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Year</th>
+        <th>Item</th>
+        <th>Code</th>
+        <th>Purpose</th>
+        <th>Subject</th>
+        <th>Lab/Room</th>
+        <th>Borrow Time</th>
+        <th>Duration (min)</th>
+        <th>Return Time</th>
+        <th>Status</th>
+        <th>Condition</th>
+        <th>Penalty</th>
+      </tr>
+    </thead>
+    <tbody id="transactionTable"></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
